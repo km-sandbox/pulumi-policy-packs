@@ -1,8 +1,8 @@
-import { PolicyPack } from '@pulumi/policy';
-import { TaggingPolicy } from './policies/TaggingPolicy.ts';
+import {PolicyPack} from '@pulumi/policy';
+import {TaggingPolicy} from './policies/TaggingPolicy';
 
 const metadataCompliancePack = new PolicyPack('MetadataCompliance', {
-    policies: [TaggingPolicy],
+  policies: [TaggingPolicy],
 });
 
-export { metadataCompliancePack };
+export {metadataCompliancePack};
