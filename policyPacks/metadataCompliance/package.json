@@ -1,6 +1,6 @@
 {
   "name": "@km-sandbox/pulumi-policy-packs",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "repository":"https://github.com/km-sandbox/pulumi-policy-packs",
   "main": "index.js",
   "types": "index.d.ts",

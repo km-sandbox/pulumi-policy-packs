@@ -32,6 +32,10 @@ export const TaggingPolicy: StackValidationPolicy = {
     reportViolation: ReportViolation
   ) => {
     for (const resource of args.resources) {
+      if (resource.type === 'pulumi:pulumi:Stack') {
+        continue;
+      }
+
       checkTags(resource, REQUIRED_TAGS, reportViolation);
     }
   },
