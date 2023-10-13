@@ -5,6 +5,8 @@ import {
   StackValidationPolicy,
 } from '@pulumi/policy';
 
+import {GCPProvider, resourceIsFromAllowedProviders} from '../utils';
+
 const REQUIRED_TAGS = ['environment', 'appName'];
 
 function checkTags(
@@ -32,11 +34,9 @@ export const TaggingPolicy: StackValidationPolicy = {
     reportViolation: ReportViolation
   ) => {
     for (const resource of args.resources) {
-      if (resource.type === 'pulumi:pulumi:Stack') {
-        continue;
+      if (resourceIsFromAllowedProviders(resource, [GCPProvider])) {
+        checkTags(resource, REQUIRED_TAGS, reportViolation);
       }
-
-      checkTags(resource, REQUIRED_TAGS, reportViolation);
     }
   },
 };
