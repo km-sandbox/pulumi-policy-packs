@@ -10,7 +10,7 @@ import {
   getResourceTags,
 } from '../utils';
 
-const REQUIRED_TAGS = ['environment', 'appName'];
+const REQUIRED_TAGS = ['env', 'app'];
 
 function reportTagsIfNotExists(
   resourceName: string,
