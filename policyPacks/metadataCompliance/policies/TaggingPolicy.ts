@@ -1,24 +1,27 @@
 import {
-  PolicyResource,
   ReportViolation,
   StackValidationArgs,
   StackValidationPolicy,
 } from '@pulumi/policy';
 
-import {GCPProvider, resourceIsFromAllowedProviders} from '../utils';
+import {
+  GCPProvider,
+  resourceIsFromAllowedProviders,
+  getResourceTags,
+} from '../utils';
 
 const REQUIRED_TAGS = ['environment', 'appName'];
 
-function checkTags(
-  resource: PolicyResource,
+function reportTagsIfNotExists(
+  resourceName: string,
+  tagKeys: string[],
   requiredTags: string[],
   reportViolation: ReportViolation
 ) {
-  const tags = resource.props['tags'];
   for (const tag of requiredTags) {
-    if (!tags || !tags[tag]) {
+    if (!tagKeys.includes(tag)) {
       reportViolation(
-        `Resource ${resource.name} is missing required tag: ${tag}.`
+        `Resource ${resourceName} is missing required tag: ${tag}.`
       );
     }
   }
@@ -35,7 +38,14 @@ export const TaggingPolicy: StackValidationPolicy = {
   ) => {
     for (const resource of args.resources) {
       if (resourceIsFromAllowedProviders(resource, [GCPProvider])) {
-        checkTags(resource, REQUIRED_TAGS, reportViolation);
+        const resourceTags = getResourceTags(resource);
+
+        reportTagsIfNotExists(
+          resource.name,
+          Object.keys(resourceTags),
+          REQUIRED_TAGS,
+          reportViolation
+        );
       }
     }
   },
