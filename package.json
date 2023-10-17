@@ -14,7 +14,7 @@
     "@types/node": "^20",
     "gts": "^5.2.0",
     "semantic-release": "^22.0.5",
-    "typescript": "5.2.2"
+    "typescript": "5.1.6"
   },
   "dependencies": {
     "@pulumi/google-native": "^0.31.1",
@@ -26,6 +26,7 @@
     "type-check": "tsc --noEmit",
     "clean": "gts clean",
     "fix": "gts fix",
-    "build": "tsc"
+    "build": "tsc",
+    "refresh-install": "rm -rf node_modules/ bin/ yarn.lock && yarn install"
   }
 }
