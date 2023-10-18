@@ -1,31 +1,13 @@
 import {
-  ReportViolation,
   StackValidationArgs,
   StackValidationPolicy,
+  ReportViolation,
 } from '@pulumi/policy';
 
-import {
-  GCPProvider,
-  resourceIsFromAllowedProviders,
-  getResourceTags,
-} from '../utils';
+import * as utils from '../utils';
+import * as validators from '../validators';
 
 const REQUIRED_TAGS = ['env', 'app'];
-
-function reportTagsIfNotExists(
-  resourceName: string,
-  tagKeys: string[],
-  requiredTags: string[],
-  reportViolation: ReportViolation
-) {
-  for (const tag of requiredTags) {
-    if (!tagKeys.includes(tag)) {
-      reportViolation(
-        `Resource ${resourceName} is missing required tag: ${tag}.`
-      );
-    }
-  }
-}
 
 export const TaggingPolicy: StackValidationPolicy = {
   name: 'tagging-policy',
@@ -36,14 +18,18 @@ export const TaggingPolicy: StackValidationPolicy = {
     args: StackValidationArgs,
     reportViolation: ReportViolation
   ) => {
-    for (const resource of args.resources) {
-      if (resourceIsFromAllowedProviders(resource, [GCPProvider])) {
-        const resourceTags = getResourceTags(resource);
+    const tagValidator = new validators.TagValidator(REQUIRED_TAGS);
 
-        reportTagsIfNotExists(
+    for (const resource of args.resources) {
+      if (
+        utils.providers.resourceIsFromAllowedProviders(resource, [
+          utils.providers.GCPProvider,
+        ])
+      ) {
+        const resourceTags = utils.tags.getResourceTags(resource);
+        tagValidator.validate(
           resource.name,
           Object.keys(resourceTags),
-          REQUIRED_TAGS,
           reportViolation
         );
       }
