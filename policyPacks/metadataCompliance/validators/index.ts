@@ -1,1 +1,1 @@
-export * from './TagValidator';
+export * from './RequiredTagValidator';

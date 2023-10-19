@@ -18,7 +18,7 @@ export const TaggingPolicy: StackValidationPolicy = {
     args: StackValidationArgs,
     reportViolation: ReportViolation
   ) => {
-    const tagValidator = new validators.TagValidator(REQUIRED_TAGS);
+    const tagValidator = new validators.RequiredTagValidator(REQUIRED_TAGS);
 
     for (const resource of args.resources) {
       if (

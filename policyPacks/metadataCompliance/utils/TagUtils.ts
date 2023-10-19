@@ -1,6 +1,6 @@
 import {PolicyResource} from '@pulumi/policy';
 
-const tagKeyNames = ['tags', 'labels'];
+export const tagKeyNames = ['tags', 'labels'];
 
 export function getResourceTags(resource: PolicyResource): {
   [key: string]: string;
