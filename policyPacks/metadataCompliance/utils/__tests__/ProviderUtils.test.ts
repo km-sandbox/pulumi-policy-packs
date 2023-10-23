@@ -1,3 +1,5 @@
+import {describe, test, expect} from 'vitest';
+
 import {createMockPolicyResource} from '../../__tests__/mockPolicyResource';
 import {resourceIsFromAllowedProviders, GCPProvider} from '../ProviderUtils';
 
@@ -25,7 +27,7 @@ describe('ProviderUtils', () => {
 
   testCases.forEach(
     ({name, resourceType, allowedProviders, expectedResult}) => {
-      it(name, () => {
+      test.concurrent(name, () => {
         const mockPolicyResource = createMockPolicyResource({
           type: resourceType,
         });

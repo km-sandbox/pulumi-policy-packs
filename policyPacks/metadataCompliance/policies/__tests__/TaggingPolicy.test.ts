@@ -1,3 +1,5 @@
+import {describe, test, expect} from 'vitest';
+
 import {TaggingPolicy} from '../TaggingPolicy';
 import {createMockPolicyResource} from '../../__tests__/mockPolicyResource';
 import {runStackPolicy} from '../../__tests__/utils';
@@ -41,7 +43,7 @@ describe('TaggingPolicy', () => {
   ];
 
   testCases.forEach(({name, tags, expectedViolations}) => {
-    it(name, async () => {
+    test.concurrent(name, async () => {
       const mockPolicyResources = [
         createMockPolicyResource({
           name: resourceName,

@@ -1,16 +1,17 @@
+import {vi, describe, beforeEach, afterEach, expect, test} from 'vitest';
 import {RequiredTagValidator} from '../RequiredTagValidator';
 
 describe('RequiredTagValidator', () => {
-  let reportViolation: jest.Mock;
+  let reportViolation: vi.doMock;
   let requiredTagValidator: RequiredTagValidator;
 
   beforeEach(() => {
-    reportViolation = jest.fn();
+    reportViolation = vi.fn();
     requiredTagValidator = new RequiredTagValidator(['env', 'app']);
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   const testCases = [
@@ -35,7 +36,7 @@ describe('RequiredTagValidator', () => {
   ];
 
   testCases.forEach(({name, tags, expectedReport, expectedReportCalled}) => {
-    it(name, () => {
+    test.concurrent(name, async () => {
       requiredTagValidator.validate('Resource1', tags, reportViolation);
 
       if (expectedReportCalled) {

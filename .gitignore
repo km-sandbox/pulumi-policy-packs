@@ -4,4 +4,5 @@
 *.js
 *.js.map
 *.d.ts
-!/jest.config.js
+**/coverage/
+**/.vitest/results.json

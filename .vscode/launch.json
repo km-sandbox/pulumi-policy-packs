@@ -4,34 +4,29 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Jest All",
-            "program": "${workspaceFolder}/node_modules/.bin/jest",
-            "args": [
-                "--runInBand"
-            ],
+            "name": "Vitest All",
+            "program": "${workspaceFolder}/node_modules/.bin/vitest",
+            "args": [],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "disableOptimisticBPs": true,
             "windows": {
-                "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+                "program": "${workspaceFolder}/node_modules/vitest/bin/vitest"
             }
         },
         {
             "type": "node",
             "request": "launch",
-            "name": "Jest Current File",
-            "program": "${workspaceFolder}/node_modules/.bin/jest",
+            "name": "Vitest Current File",
+            "program": "${workspaceFolder}/node_modules/.bin/vitest",
             "args": [
-                "${fileBasenameNoExtension}",
-                "--config",
-                "jest.config.js",
-                "--runInBand"
+                "${fileBasename}"
             ],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "disableOptimisticBPs": true,
             "windows": {
-                "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+                "program": "${workspaceFolder}/node_modules/vitest/bin/vitest"
             }
         }
     ]

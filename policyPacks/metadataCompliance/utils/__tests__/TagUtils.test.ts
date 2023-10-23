@@ -1,3 +1,5 @@
+import {describe, expect, test} from 'vitest';
+
 import {createMockPolicyResource} from '../../__tests__/mockPolicyResource';
 import {getResourceTags} from '../TagUtils';
 
@@ -29,7 +31,7 @@ describe('TagUtils', () => {
   ];
 
   testCases.forEach(({name, props, expectedTags}) => {
-    it(name, () => {
+    test.concurrent(name, () => {
       const mockPolicyResource = createMockPolicyResource({props});
 
       const actualTags = getResourceTags(mockPolicyResource);

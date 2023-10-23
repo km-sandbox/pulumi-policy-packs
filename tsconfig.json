@@ -3,22 +3,18 @@
     "compilerOptions": {
         "outDir": ".",
         "rootDir": ".",
-        "target": "es2016",
-        "module": "commonjs",
+        "lib": [
+            "dom",
+            "es2018"
+        ],
         "moduleResolution": "node",
-        "sourceMap": true,
         "experimentalDecorators": true,
-        "pretty": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitReturns": true,
-        "forceConsistentCasingInFileNames": true,
-        "strict": true
     },
     "include": [
         "**/*"
     ],
     "exclude": [
-        "node_modules",
+        "**/node_modules",
         "**/*.test.ts"
     ]
 }
