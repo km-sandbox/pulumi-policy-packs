@@ -6,3 +6,4 @@
 *.d.ts
 **/coverage/
 **/.vitest/results.json
+!.github/**

@@ -4,5 +4,5 @@ runs:
   using: "composite"
   steps:
     - name: Unit Testing
-      run: yarn unit-test
+      run: yarn unit-test --run
       shell: bash
