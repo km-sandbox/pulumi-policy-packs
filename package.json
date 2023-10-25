@@ -21,7 +21,7 @@
   "dependencies": {
     "@pulumi/google-native": "^0.31.1",
     "@pulumi/policy": "1.8.0",
-    "@pulumi/pulumi": "^3.89.0"
+    "@pulumi/pulumi": "^3.90.1"
   },
   "scripts": {
     "lint": "gts lint",
