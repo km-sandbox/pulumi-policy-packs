@@ -785,10 +785,10 @@
   dependencies:
     "@pulumi/pulumi" "^3.0.0"
 
-"@pulumi/policy@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.8.0.tgz#b9b5ed249ffb536c614b75e2c1d82cdd4da91b58"
-  integrity sha512-ch0uFK24khwO4LFrlqsVvp5rUrECUWFGASTo7e9zL+z6/G39lzNTruxXppntAqMl4BpoyS50pAM+Q+keI0SsuQ==
+"@pulumi/policy@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.9.0.tgz#ad7e648d3f493700b825b8d53d12dfa4027473d9"
+  integrity sha512-NF1+ylgJpgcIpa+SO5Ix4oTKywIe4Sa1XFKONk2M01kh6iFM67PyOiNNVDij9dVdH+OEbazZfownEDE/en1y+A==
   dependencies:
     "@grpc/grpc-js" "^1.8.16"
     "@pulumi/pulumi" "^3.88.0"
