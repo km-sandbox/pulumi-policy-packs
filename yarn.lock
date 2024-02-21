@@ -796,10 +796,10 @@
   dependencies:
     "@pulumi/pulumi" "^3.0.0"
 
-"@pulumi/policy@1.9.0":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.9.0.tgz#ad7e648d3f493700b825b8d53d12dfa4027473d9"
-  integrity sha512-NF1+ylgJpgcIpa+SO5Ix4oTKywIe4Sa1XFKONk2M01kh6iFM67PyOiNNVDij9dVdH+OEbazZfownEDE/en1y+A==
+"@pulumi/policy@1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.10.0.tgz#79a8aa52898ba1abc4da195703726168f71857c1"
+  integrity sha512-OtiZEF28yWJo+i05lxAXSYyNkLKHVVlLQ6V1Rl9NcdBTBwpv+oinAiPW24fEvsZXcfb1v6pXthTvvp77OgaxrA==
   dependencies:
     "@grpc/grpc-js" "^1.8.16"
     "@pulumi/pulumi" "^3.88.0"
