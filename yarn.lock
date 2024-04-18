@@ -208,7 +208,7 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.53.0.tgz#bea56f2ed2b5baea164348ff4d5a879f6f81f20d"
   integrity sha512-Kn7K8dx/5U6+cT1yEhpX1w4PCSg0M+XyRILPgvwcEBjerFWCwQj5sbr3/VmxqV0JGHCBCzyd6LxypEuehypY1w==
 
-"@grpc/grpc-js@^1.10.1", "@grpc/grpc-js@^1.8.16":
+"@grpc/grpc-js@^1.10.1":
   version "1.10.1"
   resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.10.1.tgz#be450560c990c08274bc19d514e181ea205ccaa8"
   integrity sha512-55ONqFytZExfOIjF1RjXPcVmT/jJqFzbbDqxK9jmRV4nxiYWtL9hENSW1Jfx0SdZfrvoqd44YJ/GJTqfRrawSQ==
@@ -808,12 +808,12 @@
   dependencies:
     "@pulumi/pulumi" "^3.0.0"
 
-"@pulumi/policy@1.10.0":
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.10.0.tgz#79a8aa52898ba1abc4da195703726168f71857c1"
-  integrity sha512-OtiZEF28yWJo+i05lxAXSYyNkLKHVVlLQ6V1Rl9NcdBTBwpv+oinAiPW24fEvsZXcfb1v6pXthTvvp77OgaxrA==
+"@pulumi/policy@1.11.0":
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.11.0.tgz#17b934ef9832bf2a73c2861e159a844dd3c54956"
+  integrity sha512-sD3kQDyNLIrpSO+sY02GyKXN26lkcLggGxj8v2KHwOqR/uHYlWlGd2CK08EFlSN8tTNrSpsBV1Ri+BL2PP/pqg==
   dependencies:
-    "@grpc/grpc-js" "^1.8.16"
+    "@grpc/grpc-js" "^1.10.1"
     "@pulumi/pulumi" "^3.88.0"
     google-protobuf "^3.5.0"
     protobufjs "^7.2.4"
