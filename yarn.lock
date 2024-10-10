@@ -806,10 +806,10 @@
   dependencies:
     "@pulumi/pulumi" "^3.0.0"
 
-"@pulumi/policy@1.12.0":
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.12.0.tgz#b4012a91926d542cbac1c374f45907837a5dba1a"
-  integrity sha512-B+8Pmg3TiOjBuWQOEEXXg3pexlR93umZCvynlNb+/rWeur2otu0hV02UHaZwVwBke6wvirRt0k5wxrI1H/5fWQ==
+"@pulumi/policy@1.13.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.13.0.tgz#6471f2e1f72dc31f7c4047e610c590c78eae38fd"
+  integrity sha512-uj43HDJti3U6q+LaT1pq7S1hyRXDZCPzEKouKnssdIN8o1Q4rkydHxVEqQ494ixGv5CkPofHGDOJLJoFaXnyPQ==
   dependencies:
     "@grpc/grpc-js" "^1.10.1"
     "@pulumi/pulumi" "^3.88.0"
