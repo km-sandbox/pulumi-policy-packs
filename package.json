@@ -11,7 +11,7 @@
     "**/*"
   ],
   "devDependencies": {
-    "@types/node": "^20.11.5",
+    "@types/node": "^22.10.7",
     "@vitest/coverage-v8": "^3.0.2",
     "gts": "^5.3.0",
     "semantic-release": "^22.0.12",
