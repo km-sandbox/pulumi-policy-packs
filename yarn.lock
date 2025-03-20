@@ -812,17 +812,17 @@
   dependencies:
     "@pulumi/pulumi" "^3.0.0"
 
-"@pulumi/policy@1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.13.0.tgz#6471f2e1f72dc31f7c4047e610c590c78eae38fd"
-  integrity sha512-uj43HDJti3U6q+LaT1pq7S1hyRXDZCPzEKouKnssdIN8o1Q4rkydHxVEqQ494ixGv5CkPofHGDOJLJoFaXnyPQ==
+"@pulumi/policy@1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/policy/-/policy-1.14.0.tgz#c0b570f21625c298e170139537560db8b4e1f6a9"
+  integrity sha512-GWTqW43dU/Qy3fsuWpDZk/loNVSp4P+YLb/s7zQraXZdQl5wJWzZCEKwqe+eS5ggbsTGDwb2QKcHDip9mq1PzQ==
   dependencies:
     "@grpc/grpc-js" "^1.10.1"
-    "@pulumi/pulumi" "^3.88.0"
+    "@pulumi/pulumi" "^3.157.0"
     google-protobuf "^3.5.0"
     protobufjs "^7.2.4"
 
-"@pulumi/pulumi@^3.0.0", "@pulumi/pulumi@^3.157.0", "@pulumi/pulumi@^3.88.0":
+"@pulumi/pulumi@^3.0.0", "@pulumi/pulumi@^3.157.0":
   version "3.157.0"
   resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-3.157.0.tgz#b935b90a43945da2e8fbc4e0c5cfdcccf2ef9c74"
   integrity sha512-28XN8M8XLnSgimWYX2TECTlReUifrdxiRsai1rBlmGyMnN+n90bgWSibLqRwOb/AKdDilwfHiY6JrV5/SuNjOQ==
