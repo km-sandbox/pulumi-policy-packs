@@ -822,10 +822,10 @@
     google-protobuf "^3.5.0"
     protobufjs "^7.2.4"
 
-"@pulumi/pulumi@^3.0.0", "@pulumi/pulumi@^3.157.0", "@pulumi/pulumi@^3.173.0":
-  version "3.173.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-3.173.0.tgz#02646dab7cd11bbfaa49490eee26e5c2f2f2dd5e"
-  integrity sha512-/qvSyYaNBV8RpB+B24H2CqF7DA+OHzUqMa/NUJWmCE41UNHPlscFgNMfR0EV7IKqH0woKtzA3DOloBZfPjINVg==
+"@pulumi/pulumi@^3.0.0", "@pulumi/pulumi@^3.157.0", "@pulumi/pulumi@^3.177.0":
+  version "3.177.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-3.177.0.tgz#4d5613382e32e62122228ac875db422019b45788"
+  integrity sha512-Ye6y3iJ2XAHsYBmy6bynPAYo0CdLzkb+854vgac0Iruancxn5FLNejgkW7gKMXKUFcFeWb5sy2NdwZFj1585Pw==
   dependencies:
     "@grpc/grpc-js" "^1.10.1"
     "@logdna/tail-file" "^2.0.6"
